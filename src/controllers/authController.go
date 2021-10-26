@@ -4,6 +4,7 @@ import (
 	"complete_golang_backend/src/database"
 	"complete_golang_backend/src/middlewares"
 	"complete_golang_backend/src/models"
+	"fmt"
 	"strings"
 	"time"
 
@@ -43,7 +44,7 @@ func Login(c *fiber.Ctx) error {
 	if err := c.BodyParser(&data); err != nil {
 		return err
 	}
-
+	fmt.Println("data", data)
 	var user models.User
 
 	database.DB.Where("email = ?", data["email"]).First(&user)
