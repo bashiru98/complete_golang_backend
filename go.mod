@@ -2,7 +2,7 @@ module complete_golang_backend
 
 go 1.17
 
-require golang.org/x/crypto v0.0.0-20210921155107-089bfa567519
+require golang.org/x/crypto e495a2d5b3d3
 
 require (
 	github.com/bxcodec/faker/v3 v3.6.0 // indirect
